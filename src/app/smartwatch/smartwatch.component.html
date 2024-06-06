@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+      <div class="display-header d-flex justify-content-between pb-3">
+        <h1 class="display-7 text-dark text-uppercase">SMART WATCHES</h1>
+        <div class="btn-right">
+          <a href="home" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
+        </div>
+      </div>
+    </div>
+  <div class="row"> 
+    <div class="col-12 col-md-4 mb-4" *ngFor="let item of WATCH" style="margin-top: 100PX;">
+        <div class="card h-100" >
+            <a href="#">
+                <img src="{{item.img}}" class="card-img-top" alt="..." style="height: 210px">
+            </a>
+            <div class="card-body">
+                <ul class="list-unstyled d-flex justify-content-between">
+                    <li>
+                        <i class="text-{{item.star1}} fa fa-star"></i>
+                        <i class="text-{{item.star2}} fa fa-star"></i>
+                        <i class="text-{{item.star3}} fa fa-star"></i>
+                        <i class="text-{{item.star4}} fa fa-star"></i>
+                        <i class="text-{{item.star5}} fa fa-star"></i>
+                    </li>
+                    <li class="text-muted text-right">{{ item.cost| currency }}</li>
+                </ul>
+                <a href="#" class="h2 text-decoration-none text-dark">{{item.name}}</a>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+                </p>
+  
+                <p class="text-muted">{{item.review}}</p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    
+  </div>
+  </div>

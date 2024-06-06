@@ -1,0 +1,32 @@
+<div class="container">
+    
+  <div class="row"> 
+    <div class="col-sm-12 col-lg-3 col-md-6 " *ngFor="let item of randomproduct" style="margin-top: 50px;">
+        <div class="card h-100" >
+            <a href="#">
+                <img src="{{item.img}}" class="card-img-top" alt="..." style="height: 230px">
+            </a>
+            <div class="card-body">
+                <ul class="list-unstyled d-flex justify-content-between">
+                    <li>
+                        <i class="text-{{item.star1}} fa fa-star"></i>
+                        <i class="text-{{item.star2}} fa fa-star"></i>
+                        <i class="text-{{item.star3}} fa fa-star"></i>
+                        <i class="text-{{item.star4}} fa fa-star"></i>
+                        <i class="text-{{item.star5}} fa fa-star"></i>
+                    </li>
+                    <li class="text-muted text-right">{{ item.cost| currency }}</li>
+                </ul>
+                <a href="#" class="h2 text-decoration-none text-dark">{{item.name}}</a>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+                </p>
+  
+                <p class="text-muted">{{item.review}}</p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    
+  </div>
+  </div>

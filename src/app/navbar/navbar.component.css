@@ -1,0 +1,39 @@
+.navbar{
+   opacity: 0.9;
+    background-color: rgb(131, 163, 117);
+    border-radius: 5px;
+   
+}
+.navbar-nav{
+    margin-left: 10px;
+   
+}
+.dropdown{
+    margin-left: 80px;
+    color: black !important;
+}
+
+.nav-item i{
+    
+    color: black;
+    font-size: 20px;
+    margin-top: 11px;
+}
+.nav-item a{
+    margin-left: 60px;
+}
+.nav-item a:hover{
+    color: rgba(255, 196, 0, 0.704) !important;
+}
+.dropdown a:hover{
+    color: rgba(255, 196, 0, 0.704) !important;
+}
+
+i{
+    transform: 1s ease;
+}
+li a i:hover{
+    color: rgba(255, 221, 0, 0.662) !important;
+    scale: 1.3;
+}
+

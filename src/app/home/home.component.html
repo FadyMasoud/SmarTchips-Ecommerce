@@ -1,0 +1,158 @@
+
+
+
+
+  <div class="text-center" style="margin-top: 200px;margin-bottom: 200px;">
+        
+    <h1 style="font-size: 100px;">Featured Product</h1>
+    <p>
+      Here you will find everything you need
+      With the highest quality and comfort for you</p>
+   
+</div>
+
+
+<div class="container">
+  <!-- <div class="row">
+    <div class="display-header d-flex justify-content-between pb-3">
+      <h1 class="display-7 text-dark text-uppercase">MOBILE PRODUCTS</h1>
+      <div class="btn-right">
+        <a href="home.html" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
+      </div>
+    </div>
+  </div>-->
+<div class="row"> 
+  <div class="col-12 col-md-4 mb-4" *ngFor="let item of Mobiles" >
+      <div class="card h-100" >
+          <a href="{{item.page}}">
+              <img src="{{item.img}}" class="card-img-top" alt="..." style="height: 280px">
+          </a>
+          <div class="card-body">
+              <ul class="list-unstyled d-flex justify-content-between">
+                  <li>
+                      <i class="text-{{item.star1}} fa fa-star"></i>
+                      <i class="text-{{item.star2}} fa fa-star"></i>
+                      <i class="text-{{item.star3}} fa fa-star"></i>
+                      <i class="text-{{item.star4}} fa fa-star"></i>
+                      <i class="text-{{item.star5}} fa fa-star"></i>
+                  </li>
+                  <li class="text-muted text-right">{{ item.cost| currency }}</li>
+              </ul>
+              <a href="shop-single.html" class="h2 text-decoration-none text-dark">{{item.name}}</a>
+              <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+              </p>
+
+              <p class="text-muted">{{item.review}}</p>
+              <!-- <button>Add To Cart</button> -->
+          </div>
+      </div>
+  </div>
+  
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="yearly-sale" class="bg-light-blue overflow-hidden mt-5 padding-xlarge" 
+style="background-image: url('assets/pexels-garrettmorrow-1649771.jpg'); background-repeat: no-repeat;
+background-size: cover;background-attachment: fixed;height: 600px;margin-bottom: 200px;">
+  <div class="row d-flex flex-wrap align-items-center" style="margin-top: 200px;">
+    <div class="col-md-6 col-sm-12">
+      <div class="text-content offset-1 padding-medium">
+        <h1 class="text-light" >10% off</h1>
+        <h2 class="display-2 pb-5 text-uppercase text-light">New year sale</h2>
+        <a href="sale" class="btn btn-light text-uppercase btn-rounded-none" style="padding: 10px 30px;">Shop Sale</a>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+<div class="container">
+    <div class="row">
+      <div class="display-header d-flex justify-content-between pb-3">
+        <h1 class="display-7 text-dark text-uppercase">NEW POSTS</h1>
+        <div class="btn-right">
+          <a href="home.html" class="btn btn-medium btn-normal text-uppercase"></a>
+        </div>
+      </div>
+    </div><br><br><br>
+  <div class="row">
+    <div class="col-12 col-md-4 mb-4" *ngFor="let item of Lastpost">
+        <div class="card h-100">
+            <a href="{{item.page}}">
+                <img src="{{item.img}}" class="card-img-top" alt="..." style="height: 300px">
+            </a>
+            <div class="card-body">
+                <ul class="list-unstyled d-flex justify-content-between">
+                    <li>
+                        <i class="text-{{item.star1}} fa fa-star"></i>
+                        <i class="text-{{item.star2}} fa fa-star"></i>
+                        <i class="text-{{item.star3}} fa fa-star"></i>
+                        <i class="text-{{item.star4}} fa fa-star"></i>
+                        <i class="text-{{item.star5}} fa fa-star"></i>
+                    </li>
+                    <li class="text-success text-right">{{ item.cost| currency }}</li>
+                </ul>
+                <a href="shop-single.html" class="h2 text-decoration-none text-dark">{{item.name}}</a>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+                </p>
+                <p class="text-muted">{{item.review}}</p>
+                <!-- <button>Add To Cart</button> -->
+            </div>
+        </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let i of products" Class="product">
+            <div class="card" id="cardbox" style="width: 18rem;">
+                <img src="{{i.img}}" class="card-img-top" alt="...">
+                 <span style="position: absolute;z-index: 2;float:left"><i class="fas fa-heart"></i></span> 
+                <div class="card-body">
+                  <h5 class="card-title">{{i.name}}</h5>
+                  <p>{{i.description}}</p>
+                  
+                  <div class="card-text"><span class="text-muted ">{{i.cost | currency: 'INR' }}</span></div>
+                  
+                  <a href="#" class="btn btn-dark">Buy it <i class="fas fa-cart-plus"></i></a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+<div class="text-center" style="margin-top: 150px;margin-bottom: 200px;">
+        
+    <h1 style="font-size: 50px;">A High Quality Store To Everyday Use</h1>
+   
+</div>

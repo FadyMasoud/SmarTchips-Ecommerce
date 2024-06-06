@@ -1,0 +1,16 @@
+.imagecover{
+    background-image: url("src/assets/pexels-ron-lach-9784240.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    filter: blur(4px);
+}
+.formdone{
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
