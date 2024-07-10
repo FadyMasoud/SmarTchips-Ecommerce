@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <div class="card p-4">
+      <h2 class="card-title text-center">{{category.cat_name}} Category</h2>
+      <p><strong>ID:</strong> {{category.cat_id}}</p>
+      <p><strong>Product name:</strong> {{category.cat_pd_name}}</p>
+      <p><strong>Description:</strong> {{category.cat_pd_description}}</p>
+      <p><strong>IMg url:</strong> {{category.cat_pd_img}}</p>
+      <div>
+      <img [src]="category.new_cat_pd_img" class="card-img-top" alt="..." style="width: 250px;height:250px;">
+      </div>
+      <p><strong>Cost:</strong> {{category.cat_pd_cost}}</p>
+      <p><strong>Review:</strong> {{category.cat_pd_review}}</p>
+      <p><strong>Rate:</strong> {{category.cat_pd_star}}</p>
+      <button class="btn btn-danger" (click)="delete()">Delete</button>
+    </div>
+  </div>
+  
+

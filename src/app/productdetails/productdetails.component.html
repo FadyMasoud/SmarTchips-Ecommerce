@@ -1,0 +1,17 @@
+<div class="container mt-5">
+    <div class="card p-4">
+      <h2 class="card-title text-center">{{product.pd_name}} Details</h2>
+      <span style="color: green;">{{message}}</span>
+      <p><strong>ID:</strong> {{product.pd_id}}</p>
+      <p><strong>Product name:</strong> {{product.pd_name}}</p>
+      <p><strong>Description:</strong> {{product.pd_description}}</p>
+      <p><strong>IMg url:</strong> {{product.pd_img}}</p>
+      <img [src]="product.new_pd_img" class="card-img-top" alt="..." style="width: 150px;height:150px;">
+      <p><strong>Cost:</strong> {{product.pd_cost}}</p>
+      <p><strong>Review:</strong> {{product.pd_review}}</p>
+      <p><strong>Rate:</strong> {{product.pd_star}}</p>
+      <p><strong>Category:</strong> {{product.pd_category_ID}}</p>
+      <button class="btn btn-danger" (click)="delete()">Delete</button>
+    </div>
+  </div>
+  

@@ -1,0 +1,69 @@
+<!-- category-form.component.html -->
+<div class="container mt-5">
+    <div class="card p-4">
+        <h2 class="card-title text-center">Category Information Form</h2>
+        <label style="color:green;" class="f-2">{{message}}</label><br>
+        <label style="color:red;" class="f-2">{{message2}}</label><br>
+        <form [formGroup]="formpcategory" >
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" formControlName="id" placeholder="Category ID" style="padding:20px">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" formControlName="categoryname" placeholder="Category Name" style="padding:20px">
+                </div>
+                <div *ngIf="f['categoryname'].touched && f['categoryname'].invalid" style="color:red;" class="msgerror">
+                    <div *ngIf="f['categoryname'].errors && f['categoryname'].errors['required']">*Category Name is required.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" formControlName="name" placeholder="Product Name" style="padding:20px">
+                </div>
+                <div *ngIf="f['name'].touched && f['name'].invalid" style="color:red;" class="msgerror">
+                    <div *ngIf="f['name'].errors && f['name'].errors['required']">*Product Name is required.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" formControlName="cost" placeholder="Cost" style="padding:20px">
+                </div>
+                <div *ngIf="f['cost'].touched && f['cost'].invalid" style="color:red;" class="msgerror">
+                    <div *ngIf="f['cost'].errors && f['cost'].errors['required']">*Cost is required.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="file">IMAGE UPLOAD</label><br><br>
+                <input type="file" id="uploadImage" class="form-control right" name="uploadFile[]" (change)="onFileChange($event)" accept=".png, .jpg, .jpeg, .gif">
+            </div><br>
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" formControlName="review" placeholder="Review" style="padding:20px">
+                </div>
+                <div *ngIf="f['review'].touched && f['review'].invalid" style="color:red;" class="msgerror">
+                    <div *ngIf="f['review'].errors && f['review'].errors['required']">*Review is required.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" formControlName="description" placeholder="Description" style="padding:20px">
+                </div>
+                <div *ngIf="f['description'].touched && f['description'].invalid" style="color:red;" class="msgerror">
+                    <div *ngIf="f['description'].errors && f['description'].errors['required']">*Description is required.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" formControlName="star" placeholder="Star Rating" style="padding:20px">
+                </div>
+                <div *ngIf="f['star'].touched && f['star'].invalid" style="color:red;" class="msgerror">
+                    <div *ngIf="f['star'].errors && f['star'].errors['required']">*Star Rating is required.</div>
+                </div>
+            </div>
+          
+            <button type="submit" class="btn btn-success btn-block mt-3" (click)="submit()">Submit</button>
+        </form>
+    </div>
+</div>

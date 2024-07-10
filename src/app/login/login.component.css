@@ -3,7 +3,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    filter: blur(4px);
+    filter: blur(7px);
 }
 .formdone{
  position: absolute;

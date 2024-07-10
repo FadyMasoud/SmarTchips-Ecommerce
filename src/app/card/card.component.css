@@ -1,0 +1,21 @@
+.container{
+    /* margin-top: 200px; */
+    margin-bottom: 300px;
+    padding: 40px;
+    padding-top: 100px;
+    border-radius: 15px;
+    transition: 1s ease;
+    cursor: pointer;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+}
+button{
+    width: 200px;
+    align-items: center;
+    text-align: center;
+}
+.row{
+    margin-top: 50px;
+    /* gap: 10px; */
+    
+    
+}

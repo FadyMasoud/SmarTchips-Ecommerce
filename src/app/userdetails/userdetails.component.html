@@ -1,0 +1,13 @@
+<div class="container mt-5">
+    <div class="card p-4">
+      <h2 class="card-title text-center">{{user.us_username}} Details</h2>
+      <p><strong>ID:</strong> {{user.us_id}}</p>
+      <p><strong>Username:</strong> {{user.us_username}}</p>
+      <p><strong>Email:</strong> {{user.us_email}}</p>
+      <p><strong>Phone:</strong> {{user.us_phone}}</p>
+      <p><strong>Position:</strong> {{user.us_postion}}</p>
+      <p><strong>Created Time:</strong> {{user.us_created_time}}</p>
+      <button class="btn btn-danger" (click)="delete()">Delete</button>
+    </div>
+  </div>
+  

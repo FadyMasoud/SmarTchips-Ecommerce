@@ -58,14 +58,14 @@
 .card{
     transition: 1s ease;
     cursor: pointer;
-    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 12px rgba(0, 0, 0, 0.4);
     
    
 }
 .card:hover{
     scale: 0.8;
     /* transform: translateY(-10px); */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.7);
 }
 button{
     padding: 15px;

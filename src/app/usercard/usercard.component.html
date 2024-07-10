@@ -1,0 +1,24 @@
+<div class="container mt-5">
+    <div class="card float-right" *ngFor="let card of usercards">
+      <div class="row">
+        <div class="col-sm-5">
+          <img class="d-block w-100" [src]="card.pd_img" alt="Product Image">
+        </div>
+        <div class="col-sm-7">
+          <div class="card-block p-3">
+            <h4 class="card-title">{{card.pd_name}}</h4>
+            <!-- <p><strong>ID:</strong> {{card.product_id}}</p> -->
+            <p><strong>Description:</strong> {{card.pd_description}}</p>
+            <p><strong>Cost:</strong> ${{card.pd_cost}}</p>
+            <p><strong>Quantity:</strong> {{card.quantity}}</p>
+            <p><strong>Review:</strong> {{card.pd_review}}</p>
+            <!-- <p><strong>Rating:</strong> {{card.pd_star}} stars</p>
+            <p><strong>Category:</strong> {{card.pd_category_ID}}</p> -->
+            <br>
+            <a href="#" class="btn btn-primary btn-sm float-right">Buy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

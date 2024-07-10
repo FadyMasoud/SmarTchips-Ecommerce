@@ -1,0 +1,24 @@
+<div class="container mt-5">
+    <div class="card float-right">
+      <div class="row">
+        <div class="col-sm-5">
+          <img class="d-block" src="{{product_card.pd_img}}" alt="Product Image">
+        </div>
+        <div class="col-sm-7">
+          <div class="card-block p-3">
+            <h4 class="card-title">{{product_card.pd_name}}</h4><br>
+            <h5><strong>Description: </strong> <span class="text-muted text-right">{{product_card.pd_description}}</span></h5><br>
+            <h5><strong>Cost: </strong> {{product_card.pd_cost| currency }}</h5><br>
+            <h5><strong>Review: </strong> {{product_card.pd_review}}</h5><br>
+            <h5><strong>Rating: </strong> {{product_card.pd_star}} stars</h5><br>
+            
+            <br><button class="btn btn-success btn-sm float-right">
+            ADD To Card
+            <!-- usercard/{{product_add_card.id_user}} -->
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

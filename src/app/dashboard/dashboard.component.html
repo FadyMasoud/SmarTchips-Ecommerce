@@ -1,0 +1,227 @@
+<!-- dashboard.component.html -->
+<div class="container mt-4">
+    <h1 class="card-header  mb-4 text-center">Dashboard</h1>
+    
+    <div class="row">
+      <div class="col-md-4">
+        <!-- Summary Component -->
+        <div class="card text-center">
+          <div class="card-header bg-secondary text-white">
+            Summary
+          </div><br>
+          <h4>
+            Categories
+          </h4> <br>
+          <h4>
+            Products
+          </h4> <br>
+          <h4>
+            Users
+          </h4> <br>
+        </div>
+      </div>
+    
+      <div class="col-md-8">
+        <!-- Activity Feed Component -->
+        <div class="card text-center">
+          <div class="card-header bg-secondary text-white">
+            Recent Activity
+          </div>
+          <div class="card-body">
+            <p class="card-text">No recent activity found.</p>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-4">
+        
+  <div class="main-card mb-3 card">
+    <div class="card-header">
+        <h4 class="card-header-title font-size-lg text-capitalize font-weight-normal">#Category</h4>
+        </div>
+    <div class="d-block p-4 text-center card-footer">
+      <button class="btn-pill btn-shadow btn-wide fsize-2 btn btn-success btn-lg " onclick="location.href='categoryform';">
+        <span class="mr-2 opacity-7"><i class="fa fa-cog fa-spin"></i> Insert</span>
+        </button>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="align-middle text-truncate mb-0 table table-borderless table-hover">
+            <thead>
+                <tr>
+                    <th class="text-center">#Id</th>
+                    <th class="text-center">Imge</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Cost</th>
+                    <th class="text-center">Description</th>
+                    <th class="text-center">Review</th>
+                    <th class="text-center">Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of category">
+                    <td class="text-center text-muted" style="width: 80px;">#{{c.cat_id}}</td>
+                    <td class="text-center" style="width: 80px;">
+                        <img  [src]="c.new_cat_pd_img" class="card-img-top" alt="..." style="width: 50px;height:50px;">
+                    </td>
+                    <td class="text-center">
+                        <a href="#">{{c.cat_name}}</a>
+                    </td>
+                    <td class="text-center">
+                      <a href="#">{{c.cat_pd_cost}}</a>
+                  </td>
+
+                    <td class="text-center">
+                        <a href="#">{{c.cat_pd_description}}</a>
+                    </td>
+                    <td class="text-center">
+                      <a href="#">{{c.cat_pd_review}}</a>
+                  </td>
+                  <td class="text-center">
+                    <a href="#">{{c.cat_pd_star}}</a>
+                
+                    <td class="text-center">
+                        <div class="btn-group-sm btn-group" role="group">
+                          <a class="btn btn-secondary btn-sm text-center" href="categorydetails/{{c.cat_id}}">Details</a>
+                          <a class="btn btn-info btn-sm text-center" href="categoryform/{{c.cat_id}}">Update</a>
+                        </div>
+                    </td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    </div><br><br><br>
+  
+    <div class="row mt-4">
+        
+      <div class="main-card mb-3 card">
+        <div class="card-header">
+            <h4 class="card-header-title font-size-lg text-capitalize font-weight-normal">#Product</h4>
+            </div>
+        <div class="d-block p-4 text-center card-footer">
+          <button class="btn-pill btn-shadow btn-wide fsize-2 btn btn-success btn-lg" onclick="location.href='productform';">
+            <span class="mr-2 opacity-7"><i class="fa fa-cog fa-spin"></i> Insert</span>
+        </button>
+        
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="align-middle text-truncate mb-0 table table-borderless table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-center">#Id</th>
+                        <th class="text-center">Imge</th>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Cost</th>
+                        <th class="text-center">Description</th>
+                        <th class="text-center">Review</th>
+                        <th class="text-center">Rate</th>
+                        <th class="text-center">Category ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of products">
+                        <td class="text-center text-muted" style="width: 80px;">#{{p.pd_id}}</td>
+                        <td class="text-center" style="width: 80px;">
+                            <img [src]="p.new_pd_img" class="card-img-top" alt="..." style="width: 50px;height:50px;">
+                        </td>
+                        <td class="text-center">
+                            <a href="#">{{p.pd_name}}</a>
+                        </td>
+                        <td class="text-center">
+                          <a href="#">{{p.pd_cost}}</a>
+                      </td>
+    
+                        <td class="text-center">
+                            <a href="#">{{p.pd_description}}</a>
+                        </td>
+                        <td class="text-center">
+                          <a href="#">{{p.pd_review}}</a>
+                      </td>
+                      <td class="text-center">
+                        <a href="#">{{p.pd_star}}</a>
+                      </td>
+                      <td class="text-center">
+                        <a href="#">{{p.pd_category_ID}}</a>
+                      </td>
+                        <td class="text-center">
+                            <div class="btn-group-sm btn-group" role="group">
+                              <a class="btn btn-secondary btn-sm text-center" href="productdetails/{{p.pd_id}}">Details</a>
+                              <a class="btn btn-info btn-sm text-center" href="productform/{{p.pd_id}}">Update</a>
+                            </div>
+                        </td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+    
+    
+        </div><br><br><br>
+        <div class="row mt-4">
+        
+          <div class="main-card mb-3 card">
+            <div class="card-header">
+                <h4 class="card-header-title font-size-lg text-capitalize font-weight-normal">#Users List</h4>
+                </div>
+            <div class="d-block p-4 text-center card-footer">
+              <button class="btn-pill btn-shadow btn-wide fsize-2 btn btn-success btn-lg" onclick="location.href='userupdate';">
+                <span class="mr-2 opacity-7"><i class="fa fa-cog fa-spin"></i> Insert</span>
+            </button>
+            
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="align-middle text-truncate mb-0 table table-borderless table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center">#Id</th>
+                            <th class="text-center">Name</th>
+                            <th class="text-center">Email</th>
+                            <th class="text-center">Phone</th>
+                            <th class="text-center">Role</th>
+                            <th class="text-center">Created Time</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users">
+                            <td class="text-center text-muted" style="width: 80px;">#{{user.us_id}}</td>
+                           
+                            <td class="text-center">
+                                <a href="#">{{user.us_username}}</a>
+                            </td>
+                            <td class="text-center">
+                              <a href="#">{{user.us_email}}</a>
+                          </td>
+        
+                            <td class="text-center">
+                                <a href="#">{{user.us_phone}}</a>
+                            </td>
+                            <td class="text-center">
+                              <a href="#">{{user.us_position}}</a>
+                          </td>
+                          <td class="text-center">
+                            <a href="#">{{user.us_created_time}}</a>
+                          </td>
+                          
+                            <td class="text-center">
+                                <div class="btn-group-sm btn-group" role="group">
+                                  <a class="btn btn-secondary btn-sm text-center" href="userdetails/{{user.us_id}}">Details</a>
+                                  <a class="btn btn-info btn-sm text-center" href="userupdate/{{user.us_id}}">Update</a>
+                                </div>
+                            </td>
+                          </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+        
+            </div><br><br><br>
+  </div>
+  
+
+ 

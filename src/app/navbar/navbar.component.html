@@ -16,38 +16,15 @@
           <li class="dropdown">
             <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Categories</a>
             <ul class="dropdown-menu">
-              <li>
-                <a href="mobile" class="dropdown-item">SmartPhone</a>
+              <li *ngFor="let c of category">
+                <a href="category/{{c.new_cat_id}}" class="dropdown-item">{{c.cat_name}}</a>
               </li>
-              <li>
-                <a href="smartwatch" class="dropdown-item">SmartWatches</a>
-              </li>
-              <li>
-                <a href="headphone" class="dropdown-item">Headphone</a>
-              </li>
-              <li>
-                <a href="laptop" class="dropdown-item">Laptop</a>
-              </li>
-              <li>
-                <a href="camera" class="dropdown-item">Camera</a>
-              </li>
-              <li>
-                <a href="ps" class="dropdown-item">PS</a>
-              </li>
-              
-              
-              
-              <li>
-                <a  href="sale" class="dropdown-item" style="color: rgb(175, 51, 2);">SALE</a>
-              </li>
-              
-             
             </ul>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="product">PRODUCTS</a>
-          </li>
+          <!-- <li class="nav-item"  >
+            <a class="nav-link active" aria-current="page" href="product/{{product.new_pd_id}}">PRODUCTS</a>
+          </li> -->
           
           
           <li class="nav-item">
@@ -56,8 +33,12 @@
           <li class="nav-item">
             <a href="#"><i class="fas fa-cart-arrow-down"></i></a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#"><i class="fas fa-heart"></i></a>
+          </li> -->
+
+          <li class="nav-item2 ">
+            <a class="nav-link2 active2 logout " aria-current="page" (click)="logout()" href="#">LOGOUT</a>
           </li>
         </ul>
         

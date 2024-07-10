@@ -22,29 +22,27 @@
     </div>
   </div>-->
 <div class="row"> 
-  <div class="col-12 col-md-4 mb-4" *ngFor="let item of Mobiles" >
+  <div class="col-12 col-md-4 mb-4" *ngFor="let item of end_category" >
       <div class="card h-100" >
-          <a href="{{item.page}}">
-              <img src="{{item.img}}" class="card-img-top" alt="..." style="height: 280px">
+          <a href="category/{{item.new_cat_id}}">
+              <img src="{{item.cat_pd_img}}" class="card-img-top" alt="..." style="height: 280px">
           </a>
           <div class="card-body">
               <ul class="list-unstyled d-flex justify-content-between">
-                  <li>
-                      <i class="text-{{item.star1}} fa fa-star"></i>
-                      <i class="text-{{item.star2}} fa fa-star"></i>
-                      <i class="text-{{item.star3}} fa fa-star"></i>
-                      <i class="text-{{item.star4}} fa fa-star"></i>
-                      <i class="text-{{item.star5}} fa fa-star"></i>
-                  </li>
-                  <li class="text-muted text-right">{{ item.cost| currency }}</li>
+                <i *ngFor="let star of stars; let i = index" 
+                class="fa" 
+                [ngClass]="{'fa-star': i < 5, 'fa-star-o': i >= 5}">
+             </i>
+                  <li class="text-muted text-right">{{ item.cat_pd_cost| currency }}</li>
               </ul>
-              <a href="shop-single.html" class="h2 text-decoration-none text-dark">{{item.name}}</a>
+              <a href="category/{{item.new_cat_id}}" class="h2 text-decoration-none text-dark">{{item.cat_pd_name}}</a>
               <p class="card-text">
+               
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
               </p>
 
-              <p class="text-muted">{{item.review}}</p>
-              <!-- <button>Add To Cart</button> -->
+              <p class="text-muted">{{item.cat_pd_review}}</p>
+              <!-- <a href="category/{{item.pd_category_ID}}"><button>Add To Cart</button></a> -->
           </div>
       </div>
   </div>
@@ -94,27 +92,24 @@ background-size: cover;background-attachment: fixed;height: 600px;margin-bottom:
       </div>
     </div><br><br><br>
   <div class="row">
-    <div class="col-12 col-md-4 mb-4" *ngFor="let item of Lastpost">
+    <div class="col-12 col-md-4 mb-4" *ngFor="let item of first_category">
         <div class="card h-100">
-            <a href="{{item.page}}">
-                <img src="{{item.img}}" class="card-img-top" alt="..." style="height: 300px">
+            <a href="category/{{item.new_cat_id}}">
+                <img src="{{item.cat_pd_img}}" class="card-img-top" alt="..." style="height: 300px">
             </a>
             <div class="card-body">
-                <ul class="list-unstyled d-flex justify-content-between">
-                    <li>
-                        <i class="text-{{item.star1}} fa fa-star"></i>
-                        <i class="text-{{item.star2}} fa fa-star"></i>
-                        <i class="text-{{item.star3}} fa fa-star"></i>
-                        <i class="text-{{item.star4}} fa fa-star"></i>
-                        <i class="text-{{item.star5}} fa fa-star"></i>
-                    </li>
-                    <li class="text-success text-right">{{ item.cost| currency }}</li>
-                </ul>
-                <a href="shop-single.html" class="h2 text-decoration-none text-dark">{{item.name}}</a>
+              <ul class="list-unstyled d-flex justify-content-between">
+                <i *ngFor="let star of stars; let i = index" 
+                class="fa" 
+                [ngClass]="{'fa-star': i < 5, 'fa-star-o': i >= 5}">
+             </i>
+                  <li class="text-muted text-right">{{ item.cat_pd_cost| currency }}</li>
+              </ul>
+                <a href="category/{{item.cat_id}}" class="h2 text-decoration-none text-dark">{{item.cat_pd_name}}</a>
                 <p class="card-text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
                 </p>
-                <p class="text-muted">{{item.review}}</p>
+                <p class="text-muted">{{item.cat_pd_review}}</p>
                 <!-- <button>Add To Cart</button> -->
             </div>
         </div>

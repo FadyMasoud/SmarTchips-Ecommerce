@@ -1,0 +1,44 @@
+.list-group-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .flex-item {
+    margin: 10px; Adjust the spacing as needed
+}
+
+.flex-item img {
+    display: block;
+    margin-left: 10px; Add margin to the left of the image if needed
+} */
+.container{
+    margin-top: 200px;
+
+}
+.mb-4{
+    margin-top: 200px;
+}
+.card{
+    margin-top: 100px;
+}
+h2{
+    margin-top: 100px;
+    margin-bottom:100px ;
+}
+ul li span{
+    margin: 10px;
+    padding: 5px;
+}
+ 
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.row{
+    margin-top:150px;
+    margin-bottom: 150px;
+}
+.container{
+    margin-top: 300px;
+}

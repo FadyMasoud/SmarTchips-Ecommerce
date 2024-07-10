@@ -1,0 +1,167 @@
+<div class="container mt-5">
+    <div class="card p-4">
+      <!-- <h2 class=" text-center">{{username.email}}</h2> -->
+
+      <h2 class="card-title text-center">User-Information Form</h2>
+      <label style="color:green ;" class="f-2"> {{message}}</label><br><br>
+      <label style="color:red ;" class="f-2"> {{message2}}</label><br><br>
+      <form [formGroup]="form">
+        <div class="form-group">
+          <div class="input-group mb-3">
+              <input type="text" class="form-control" formControlName="id" placeholder="User ID" style="padding:20px">
+            </div>
+            </div>
+        <div class="form-group">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" formControlName="username" placeholder="User Name" style="padding:20px">
+              </div>
+              <!-- Display error message for username field -->
+              <div *ngIf="f['username'].touched && f['username'].invalid" style="color:red;" class="msgerror">
+                <!-- Display error message if username is required -->
+                <div *ngIf="f['username'].errors && f['username'].errors['required']"> *Username is required.</div>
+              </div>
+              </div>
+              <div class="form-group">
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" formControlName="mail" placeholder="Email" style="padding:20px">
+              </div>    
+                <!-- Display error message for email field -->
+                <div *ngIf="f['mail'].touched && f['mail'].invalid" style="color:red;" class="msgerror">
+                  <!-- Display error message if email is required -->
+                  <div *ngIf="f['mail'].errors && f['mail'].errors['required']"> *Email is required.</div>
+                  <!-- Display error message if email is invalid -->
+                  <div *ngIf="f['mail'].errors && f['mail'].errors['email']"> *Invalid Email.</div>
+                </div>
+                </div>
+
+                <div class="form-group">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" formControlName="phone" placeholder="Phone" style="padding:20px" pattern="^(012|010|011|015)\d{8}$" maxlength="11">
+                </div>
+                <!-- Display error message for phone field -->
+                <div *ngIf="f['phone'].touched && f['phone'].invalid" style="color:red;" class="msgerror">
+                  <!-- Display error message if phone is required -->
+                  <div *ngIf="f['phone'].errors && f['phone'].errors['required']"> *Phone is required.</div>
+                  *invalid pass. <br>
+                </div>
+                </div>
+        <div class="form-group">
+            <div class="input-group mb-3">
+                <input type="password" class="form-control" formControlName="pass" placeholder="Password" style="padding:20px">
+              </div>
+              <!-- Display error message for password field -->
+              <div *ngIf="f['pass'].touched && f['pass'].invalid" style="color:red;" class="msgerror">
+                <!-- Display error message if password is required -->
+                <div *ngIf="f['pass'].errors && f['pass'].errors['required']"> *Password is required.</div>
+              </div>
+          </div>
+
+          <div class="form-group">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" formControlName="position" placeholder="Position" style="padding:20px">
+                  </div>
+                  Display error message for position field
+                  <div *ngIf="f['position'].touched && f['position'].invalid" style="color:red;" class="msgerror">
+                    Display error message if position is required
+                    <div *ngIf="f['position'].errors && f['position'].errors['required']"> *Position is required.</div>
+                  </div>
+                  </div>
+        
+        <button type="submit" class="btn btn-primary btn-block mt-3" (click)="submit()" [disabled]="form.invalid">Submit</button>
+      </form>
+    </div>
+  </div>
+  
+
+<!-- <div class="formdone">
+<div class="container">
+    <div class="row" >
+      <div class="col-md-6"></div>
+      <div class="col-md-6 col-sm-12">
+        <div class="login-box" style="margin-top: 50px;">
+         
+          <div class="card card1" style="padding:10px"> 
+                
+          <form [formGroup]="form">
+           
+            <div class="card-body login-card-body">
+              <div class="login-logo">
+                <h1 style="text-align:center"> Sign in </h1>
+               </div><br>
+               <div style="text-align:center;color: red;">{{message}}</div>
+               <div style="text-align:center;color: green;">{{message2}}</div>
+                <br><br>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" formControlName="username" placeholder="User Name" style="padding:20px">
+                </div>
+                Display error message for username field
+                <div *ngIf="f['username'].touched && f['username'].invalid" style="color:red;" class="msgerror">
+                  Display error message if username is required
+                  <div *ngIf="f['username'].errors && f['username'].errors['required']"> *Username is required.</div>
+                </div>
+                
+                <div class="input-group mb-3">
+                  <input type="email" class="form-control" formControlName="mail" placeholder="Email" style="padding:20px">
+                </div>    
+                  Display error message for email field
+                  <div *ngIf="f['mail'].touched && f['mail'].invalid" style="color:red;" class="msgerror">
+                    Display error message if email is required
+                    <div *ngIf="f['mail'].errors && f['mail'].errors['required']"> *Email is required.</div>
+                    Display error message if email is invalid
+                    <div *ngIf="f['mail'].errors && f['mail'].errors['email']"> *Invalid Email.</div>
+                  </div>
+                  
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" formControlName="phone" placeholder="Phone" style="padding:20px" pattern="^(012|010|011|015)\d{8}$" maxlength="11">
+                </div>
+                Display error message for phone field
+                <div *ngIf="f['phone'].touched && f['phone'].invalid" style="color:red;" class="msgerror">
+                  Display error message if phone is required
+                  <div *ngIf="f['phone'].errors && f['phone'].errors['required']"> *Phone is required.</div>
+                  *invalid pass. <br>
+                </div>
+                
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" formControlName="position" placeholder="Position" style="padding:20px">
+                </div>
+                Display error message for position field
+                <div *ngIf="f['position'].touched && f['position'].invalid" style="color:red;" class="msgerror">
+                  Display error message if position is required
+                  <div *ngIf="f['position'].errors && f['position'].errors['required']"> *Position is required.</div>
+                </div>
+                
+                <div class="input-group mb-3">
+                  <input type="password" class="form-control" formControlName="pass" placeholder="Password" style="padding:20px">
+                </div>
+                Display error message for password field
+                <div *ngIf="f['pass'].touched && f['pass'].invalid" style="color:red;" class="msgerror">
+                  Display error message if password is required
+                  <div *ngIf="f['pass'].errors && f['pass'].errors['required']"> *Password is required.</div>
+                </div>
+
+                <div class="input-group mb-3">
+                  <input type="password" class="form-control" formControlName="confirmpass" placeholder="ConfirmPassword" style="padding:20px">
+                </div>
+                Display error message for password field
+                <div *ngIf="f['confirmpass'].touched && f['confirmpass'].invalid" style="color:red;" class="msgerror">
+                  Display error message if password is required
+                  <div *ngIf="f['confirmpass'].errors && f['confirmpass'].errors['required']"> *Confirm Password is required.</div>
+                </div>
+                
+                <div class="row">
+                  <button type="submit" class="btn btn-success btn-block login" [disabled]="form.invalid" (click)="submit()"
+                   style="padding:20px;font-size: 20px;">submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+  <div class="col-md-3"></div>
+  <div class="col-md-3"></div>
+  
+  </div>
+</div>
+  </div> -->
+
+

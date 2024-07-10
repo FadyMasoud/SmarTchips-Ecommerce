@@ -11,14 +11,20 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { SliderComponent } from './slider/slider.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MobileComponent } from './mobile/mobile.component';
-import { SmartwatchComponent } from './smartwatch/smartwatch.component';
-import { LaptopComponent } from './laptop/laptop.component';
-import { HeadphoneComponent } from './headphone/headphone.component';
-import { CameraComponent } from './camera/camera.component';
-import { PsComponent } from './ps/ps.component';
-import { SaleComponent } from './sale/sale.component';
+
 import { ProductComponent } from './product/product.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { CategoryComponent } from './category/CategoryComponent';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserupdateComponent } from './userupdate/userupdate.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { ProductformComponent } from './productform/productform.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { CategoryformComponent } from './categoryform/categoryform.component';
+import { CategorydetailsComponent } from './categorydetails/categorydetails.component';
+import { CardComponent } from './card/card.component';
+import { UsercardComponent } from './usercard/usercard.component';
 
 @NgModule({
   declarations: [
@@ -29,23 +35,29 @@ import { ProductComponent } from './product/product.component';
     LoginComponent,
     SignupComponent,
     SliderComponent,
-    MobileComponent,
-    SmartwatchComponent,
-    LaptopComponent,
-    HeadphoneComponent,
-    CameraComponent,
-    PsComponent,
-    SaleComponent,
-    ProductComponent
+    ProductComponent,
+    CategoryComponent,
+    DashboardComponent,
+    UserupdateComponent,
+    UserdetailsComponent,
+    ProductformComponent,
+    ProductdetailsComponent,
+    CategoryformComponent,
+    CategorydetailsComponent,
+    CardComponent,
+    UsercardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
    FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

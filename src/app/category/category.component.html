@@ -1,0 +1,38 @@
+<div class="container" >
+  <div class="row">
+    <div class="display-header d-flex justify-content-between pb-3"   >
+      <h1 class="display-7 text-dark text-uppercase">{{topic.cat_name}} </h1>
+      <div class="btn-right">
+        <a href="home" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
+      </div>
+    </div>
+  </div>
+<div class="row"> 
+  <div class="col-12 col-md-4 mb-4 basecard" *ngFor="let i of product ">
+      <div class="card h-100" >
+          <a href="card/{{i.new_pd_id}}">
+              <img src="{{i.pd_img}}" class="card-img-top" alt="..." style="height: 250px">
+          </a>
+          <div class="card-body">
+              <ul class="list-unstyled d-flex justify-content-between">
+                  <!-- <li>
+               <i *ngFor="let star of product.pd_star; let i = index"
+                 class="text-{{star >= i+1 ? 'warning' : 'default'}} fa fa-star"></i>
+                  </li> -->
+                  <li class="text-muted text-right">${{i.pd_cost}}</li>
+                  
+              </ul>
+              <a href="card/{{i.pd_id}}" class="h2 text-decoration-none text-dark">{{ i.pd_name}}</a>
+              <p class="card-text">
+                <!-- {{product.pd_description}} -->
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+              </p>
+
+              <p class="text-muted">{{ i.pd_review}}</p>
+              <button><a href="card/{{i.new_pd_id}}">Details</a></button>
+          </div>
+      </div>
+  </div>
+  
+</div>
+</div>

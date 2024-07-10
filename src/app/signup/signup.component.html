@@ -14,7 +14,9 @@
               <div class="login-logo">
                 <h1 style="text-align:center"> Sign in </h1>
                </div><br>
-               <div style="text-align:center;color: red;">{{message}}</div> <br><br>
+               <div style="text-align:center;color: red;">{{message}}</div>
+               <div style="text-align:center;color: green;">{{message2}}</div>
+                <br><br>
                 <div class="input-group mb-3">
                   <input type="text" class="form-control" formControlName="username" placeholder="User Name" style="padding:20px">
                 </div>
@@ -36,12 +38,13 @@
                   </div>
                   
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" formControlName="phone" placeholder="Phone" style="padding:20px">
+                  <input type="text" class="form-control" formControlName="phone" placeholder="Phone" style="padding:20px" pattern="^(012|010|011|015)\d{8}$" maxlength="11">
                 </div>
                 <!-- Display error message for phone field -->
                 <div *ngIf="f['phone'].touched && f['phone'].invalid" style="color:red;" class="msgerror">
                   <!-- Display error message if phone is required -->
                   <div *ngIf="f['phone'].errors && f['phone'].errors['required']"> *Phone is required.</div>
+                  *invalid pass. <br>
                 </div>
                 
                 <div class="input-group mb-3">
@@ -61,6 +64,15 @@
                   <!-- Display error message if password is required -->
                   <div *ngIf="f['pass'].errors && f['pass'].errors['required']"> *Password is required.</div>
                 </div>
+
+                <!-- <div class="input-group mb-3">
+                  <input type="password" class="form-control" formControlName="confirmpass" placeholder="ConfirmPassword" style="padding:20px">
+                </div>
+                Display error message for password field
+                <div *ngIf="f['confirmpass'].touched && f['confirmpass'].invalid" style="color:red;" class="msgerror">
+                  Display error message if password is required
+                  <div *ngIf="f['confirmpass'].errors && f['confirmpass'].errors['required']"> *Confirm Password is required.</div>
+                </div> -->
                 
                 <div class="row">
                   <button type="submit" class="btn btn-success btn-block login" [disabled]="form.invalid" (click)="submit()"
